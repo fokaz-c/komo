@@ -1,0 +1,20 @@
+CompileFlags:
+  Add:
+    - -std=c11
+    - -x
+    - c
+    - -Wall
+    - -Wextra
+    - -Wpedantic
+    - -Isrc
+
+Diagnostics:
+  UnusedIncludes: Strict
+  ClangTidy:
+    Add:
+      - bugprone-*
+      - cert-*
+      - clang-analyzer-*
+    Remove:
+      - cert-dcl37-c
+      - cert-dcl51-cpp

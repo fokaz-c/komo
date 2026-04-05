@@ -1,0 +1,28 @@
+# build
+build/
+cmake-build-*/
+
+# compiled
+*.o
+*.a
+*.so
+*.out
+
+# cmake
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+
+# clangd
+.cache/
+compile_commands.json
+
+# editor
+.zed/
+.vscode/
+*.swp
+*.swo
+
+# os
+.DS_Store
