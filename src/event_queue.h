@@ -4,6 +4,7 @@
 #include <stdbool.h>
 #include <stddef.h>
 
+/* size must be a power of 2, wrap uses bitmask, not modulo */
 #define EVENT_QUEUE_SIZE 32
 
 typedef struct {

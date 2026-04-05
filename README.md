@@ -36,3 +36,9 @@ If stopping the buzzer when leaving the alarm state is important, it should be i
 
 **Silence is a valid response.**
 If an event arrives that the current state has no transition for, the engine ignores it. States are defined by what they respond to, not by exhaustively rejecting everything they don't care about.
+
+## Porting to bare-metal
+
+`event_queue` is not ISR-safe by default. On Linux it assumes single-threaded
+access. On STM32, if you push from an ISR and pop from a task, wrap push/pop
+with `__disable_irq()` / `__enable_irq()` or replace with a lock-free SPSC queue.
