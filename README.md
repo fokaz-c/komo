@@ -1,6 +1,6 @@
-# fsm-engine
+# komo
 
-A table-driven finite state machine engine in C, built for embedded systems.
+A finite state machine engine for embedded C. Define your states, events, and transitions as a table. The engine handles the rest -- guards, entry and exit hooks, debug logging, and a queue so interrupts and your main loop never collide. No heap, no dependencies, drops straight into bare-metal or FreeRTOS.
 
 ---
 
